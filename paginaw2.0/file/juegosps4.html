@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JUEGOS PS4</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        #detalle-producto {
+            background-color: #e5dbb1;
+            border: 1px solid  #e5dbb1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        #detalle-producto img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease; /* Agregamos la transición para el zoom suave */
+        }
+
+        /* Efecto de acercamiento (zoom) al pasar el mouse */
+        #detalle-producto img:hover {
+            transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+        }
+
+        #detalle-producto h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #detalle-producto .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #detalle-producto .estrellas {
+            margin-top: 15px;
+        }
+
+        #detalle-producto .estrellas span {
+            color: gold;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        #detalle-producto .comprar-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        #detalle-producto .comprar-btn:hover {
+            background-color: #45a049;
+        }
+
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .producto {
+            width: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .producto:hover img {
+            transform: scale(1.05); /* Efecto de zoom para las imágenes de productos */
+        }
+
+        .producto h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .producto .precio {
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .producto .comprar-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .producto .comprar-btn:hover {
+            background-color: #45a049;
+        }
+
+        .estrellas span {
+            color: gold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="titulo">
+    <h1>Catálogo de Productos PS4 Y PS</h1>
+</div>
+
+<!-- Contenedor de los productos -->
+<div class="productos-container">
+    <!-- Producto 1 -->
+    <div class="producto">
+        <img src="./imagenes/ps1.jpg" alt="JUEGO PS4 GOD OF WAR">
+        <h3>JUEGO PS4 GOD OF WAR</h3>
+        <p>Un emocionante juego de aventura para PS4. Disfruta de la mitología nórdica.</p>
+        <div class="precio">$99.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto">
+        <img src="./imagenes/ps2.jpg" alt="THE LAST OF US 2">
+        <h3>"THE LAST OF US 2   </h3>
+        <p>Disfruta del famoso juego de the last of us 2 en PS4. ¡disfrura recoreindo y haciendo sus misiones principales!</p>
+        <div class="precio">$59.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto">
+        <img src="./imagenes/ps4.jpg" alt="JUEGO THE VENDETA">
+        <h3>JUEGO THE VENDETA</h3>
+        <p>Disfruta del famoso juego de the vendeta!</p>
+        <div class="precio">$49.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="producto">
+        <img src="./imagenes/ps3.jpeg" alt="JUEGO PS4 GHOST">
+        <h3>JUEGO PS4 GHOST</h3>
+        <p>Aventúrate en un mundo post-apocalíptico mientras luchas contra otros espadashines y monstruos.</p>
+        <div class="precio">$39.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="producto">
+        <img src="./imagenes/ps6.jpeg" alt="JUEGO PS4/PS5 THE SHOW">
+        <h3>JUEGO PS4/PS5 THE SHOW</h3>
+        <p>juego de baseball para ps4/ps5.</p>
+        <div class="precio">$149.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="producto">
+        <img src="./imagenes/ps5.jpg" alt="JUEGO MORTAL COMBAT">
+        <h3>JUEGO MORTAL COMBAT</h3>
+        <p>Un juego de torneos y luchas libres exclusivo de PS, con gráficos impresionantes y una jugabilidad única.</p>
+        <div class="precio">$69.99 USD</div>
+        <div class="estrellas">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+

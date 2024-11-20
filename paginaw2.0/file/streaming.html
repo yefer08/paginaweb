@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JUEGOS PS4</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Contenedor principal que agrupa los productos */
+        .productos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        /* Estilos de cada producto */
+        #detalle-producto {
+            background-color: #e5dbb1;
+            border: 1px solid #e5dbb1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            /* Transición para suavizar el efecto de aumento */
+            transition: transform 0.3s ease;
+        }
+
+        #detalle-producto img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        #detalle-producto h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #detalle-producto .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #detalle-producto .estrellas {
+            margin-top: 15px;
+        }
+
+        #detalle-producto .estrellas span {
+            color: gold;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        #detalle-producto .comprar-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        #detalle-producto .comprar-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Animación de aumento al pasar el mouse */
+        #detalle-producto:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al 105% */
+        }
+    </style>
+</head>
+<body>
+
+<div id="titulo">
+    <h1>STREAMING</h1>
+</div>
+
+<!-- Contenedor que agrupa todos los productos -->
+<div class="productos-container">
+    <!-- Primer producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/str1.png" alt="NETFLIX">
+        <h2>NETFLIX</h2>
+        <p>cuentas de neflix para ver pelicals y series</p>
+        <div class="precio">$20.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Segundo producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/str2.png" alt="PRIME VIDEO">
+        <h2>PRIME VIDEO</h2>
+        <p>cuentas de prime video para ver pelicals y series.</p>
+        <div class="precio">$10.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Tercer producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/str3.jpg" alt="HBO">
+        <h2>HBO</h2>
+        <p>¡HBO!</p>
+        <div class="precio">$20.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Cuarto producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/str4.png" alt="SPOTIFY">
+        <h2>SPOTIFY</h2>
+        <p>SPOTIFY.</p>
+        <div class="precio">$30.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Quinto producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/str5.png" alt="PARAMOUNT">
+        <h2>PARAMOUNT</h2>
+        <p>PARAMOUNT.</p>
+        <div class="precio">$15.99 USD</div>
+        <div class="estrellas">
+            <span>★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <div id="detalle-producto">
+        <img src="./imagenes/str6.jpg" alt="STAR +">
+        <h2>STAR +</h2>
+        <p>STAR +.</p>
+        <div class="precio">$20.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <div id="detalle-producto">
+        <img src="./imagenes/str7.png" alt="APPLE TV">
+        <h2>APPLE TV</h2>
+        <p>APPLE TV.</p>
+        <div class="precio">$30.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <div id="detalle-producto">
+        <img src="./imagenes/str8.jpg" alt="MAGIS TV">
+        <h2>MAGIS TV</h2>
+        <p>MAGIS TV.</p>
+        <div class="precio">$20.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <div id="detalle-producto">
+        <img src="./imagenes/str9.png" alt="YOUTUBE PREMIUN">
+        <h2>YOUTUBE PREMIUN</h2>
+        <p>YOUTUBE PREMIUN.</p>
+        <div class="precio">$25.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+</div>
+
+</body>
+</html>

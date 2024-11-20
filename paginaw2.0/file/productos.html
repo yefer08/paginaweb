@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Estilos básicos para la información del producto */
+        #detalle-producto {
+            display: none; /* Oculto por defecto */
+            background-color: #e5dbb1;
+            border: 1px solid  #e5dbb1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        #detalle-producto img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        #detalle-producto h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #detalle-producto .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #detalle-producto .estrellas {
+            margin-top: 15px;
+        }
+
+        #detalle-producto .estrellas span {
+            color: gold;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        #detalle-producto .comprar-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        #detalle-producto .comprar-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="titulo">
+    <h1>CATÁLOGO DE PRODUCTOS</h1>
+</div>
+
+<div id="galeria">
+    <div class="producto" onclick="mostrarInformacion('producto1')">
+        <img src="./imagenes/5.jpg" alt="Producto 1">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto2')">
+        <img src="./imagenes/6.jpg" alt="Producto 2">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto3')">
+        <img src="./imagenes/8.jpg" alt="Producto 3">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto4')">
+        <img src="./imagenes/7.jpg" alt="Producto 4">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto5')">
+        <img src="./imagenes/n1.jpeg" alt="Producto 5">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto6')">
+        <img src="./imagenes/n2.jpeg" alt="Producto 6">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto7')">
+        <img src="./imagenes/n3.jpeg" alt="Producto 7">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto8')">
+        <img src="./imagenes/n4.jpeg" alt="Producto 8">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto9')">
+        <img src="./imagenes/n5.jpeg" alt="Producto 9">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto10')">
+        <img src="./imagenes/n6.jpeg" alt="Producto 10">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto11')">
+        <img src="./imagenes/n7.jpeg" alt="Producto 11">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto12')">
+        <img src="./imagenes/n8.jpeg" alt="Producto 12">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto13')">
+        <img src="./imagenes/n9.jpeg" alt="Producto 13">
+    </div>
+	<div class="producto" onclick="mostrarInformacion('producto14')">
+        <img src="./imagenes/n10.jpeg" alt="Producto 14">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto15')">
+        <img src="./imagenes/ps1.jpg" alt="Producto 15">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto16')">
+        <img src="./imagenes/ps2.jpg" alt="Producto 16">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto17')">
+        <img src="./imagenes/ps3.jpeg" alt="Producto 17">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto18')">
+        <img src="./imagenes/ps4.jpg" alt="Producto 18">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto19')">
+        <img src="./imagenes/ps5.jpg" alt="Producto 19">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto20')">
+        <img src="./imagenes/ps6.jpeg" alt="Producto 20">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto21')">
+        <img src="./imagenes/ps7.jpg" alt="Producto 21">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto22')">
+        <img src="./imagenes/ps8.jpg" alt="Producto 22">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto23')">
+        <img src="./imagenes/ps9.jpeg" alt="Producto 23">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto24')">
+        <img src="./imagenes/ps10.jpeg" alt="Producto 24">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto25')">
+        <img src="./imagenes/xb1.jpeg" alt="Producto 25">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto26')">
+        <img src="./imagenes/xb2.jpeg" alt="Producto 26">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto27')">
+        <img src="./imagenes/xb3.jpeg" alt="Producto 27">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto28')">
+        <img src="./imagenes/xb4.jpeg" alt="Producto 28">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto29')">
+        <img src="./imagenes/xb5.jpeg" alt="Producto 29">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto30')">
+        <img src="./imagenes/xb6.png" alt="Producto 30">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto31')">
+        <img src="./imagenes/xb7.png" alt="Producto 31">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto32')">
+        <img src="./imagenes/xb8.jpeg" alt="Producto 32">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto33')">
+        <img src="./imagenes/xb9.jpeg" alt="Producto 33">
+    </div>
+    <div class="producto" onclick="mostrarInformacion('producto34')">
+        <img src="./imagenes/xb10.png" alt="Producto 34">
+    </div>
+    <!-- Puedes agregar más productos aquí de la misma manera -->
+</div>
+
+<!-- Detalle del producto -->
+<div id="detalle-producto">
+    <img id="detalle-img" src="" alt="">
+    <h2 id="detalle-titulo"></h2>
+    <p id="detalle-descripcion"></p>
+    <div class="precio" id="detalle-precio"></div>
+    <div class="estrellas" id="detalle-estrellas"></div>
+    <button class="comprar-btn">Comprar ahora</button>
+</div>
+
+<script>
+    function mostrarInformacion(producto) {
+        // Información de productos (puedes agregar más aquí)
+        var infoProductos = {
+            'producto1': {
+                img: './imagenes/5.jpg',
+                titulo: 'TARJETA DE REGALO NINTENDO',
+                descripcion: 'tarjeta de regalo por 12 meses.',
+                precio: '$99.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto2': {
+                img: './imagenes/6.jpg',
+                titulo: 'TARJETA DE REGALO XBOX',
+                descripcion: 'tarjeta de regalo por 12 meses.',
+                precio: '$149.99 USD',
+                estrellas: '★★★★☆'
+            },
+            'producto3': {
+                img: './imagenes/7.jpg',
+                titulo: 'TARJETA DE REGALO PS',
+                descripcion: 'tarjeta de regalo por 12 meses.',
+                precio: '$199.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto4': {
+                img: './imagenes/7.jpg',
+                titulo: 'Producto 4',
+                descripcion: 'Descripción detallada del Producto 4.',
+                precio: '$249.99 USD',
+                estrellas: '★★★★☆'
+            },
+			'producto5': {
+                img: './imagenes/n1.jpeg',
+                titulo: 'MARIOKART DELUXE',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$99.99 USD',
+                estrellas: '★★★☆☆'
+            },
+			'producto6': {
+                img: './imagenes/n2.jpeg',
+                titulo: 'SUPER SMAHS BROS',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$89.99 USD',
+                estrellas: '★★★★★'
+            },
+			'producto7': {
+                img: './imagenes/n3.jpeg',
+                titulo: 'SUPER MARIO ODYSSEY',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$90.99 USD',
+                estrellas: '★★★★☆'
+            },
+			'producto8': {
+                img: './imagenes/n4.jpeg',
+                titulo: 'SPLATOON',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$79.99 USD',
+                estrellas: '★★★★☆'
+            },
+			'producto9': {
+                img: './imagenes/n5.jpeg',
+                titulo: 'KIRBY',
+                descripcion: 'prooducto regular de nintendo.',
+                precio: '$70.99 USD',
+                estrellas: '★★☆☆☆'
+            },
+			'producto10': {
+                img: './imagenes/n6.jpeg',
+                titulo: 'BLOB',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$75.99 USD',
+                estrellas: '★★★★☆'
+            },
+			'producto11': {
+                img: './imagenes/n7.jpeg',
+                titulo: 'ARMS',
+                descripcion: 'prooducto regular de nintendo.',
+                precio: '$40.99 USD',
+                estrellas: '★★☆☆☆'
+            },
+			'producto12': {
+                img: './imagenes/n8.jpeg',
+                titulo: 'CANDLE',
+                descripcion: 'prooducto regular de nintendo.',
+                precio: '$50.99 USD',
+                estrellas: '★★★☆☆'
+            },
+			'producto13': {
+                img: './imagenes/n9.jpeg',
+                titulo: 'MINECRAFT',
+                descripcion: 'prooducto deluxe de nintendo.',
+                precio: '$80.99 USD',
+                estrellas: '★★★★☆'
+            },
+			'producto14': {
+                img: './imagenes/n10.jpeg',
+                titulo: 'ZELDA',
+                descripcion: 'prooducto vip de nintendo.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto15': {
+                img: './imagenes/ps1.jpg',
+                titulo: 'GOD OF WAR',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto16': {
+                img: './imagenes/ps2.jpg',
+                titulo: 'THE LAST OF US 2',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto17': {
+                img: './imagenes/ps3.jpeg',
+                titulo: 'GHOST',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto18': {
+                img: './imagenes/ps4.jpg',
+                titulo: 'VENDETTA',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto19': {
+                img: './imagenes/ps5.jpg',
+                titulo: 'MORTAL COMBAT',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto20': {
+                img: './imagenes/ps6.jpeg',
+                titulo: 'THE SHOW',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto21': {
+                img: './imagenes/ps7.jpg',
+                titulo: 'GRAND THE AUTO SAN ANDREAS',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto22': {
+                img: './imagenes/ps8.jpg',
+                titulo: 'BATMAN',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto23': {
+                img: './imagenes/ps9.jpeg',
+                titulo: 'MEDIUM',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto24': {
+                img: './imagenes/ps10.jpeg',
+                titulo: 'GODFALL',
+                descripcion: 'prooducto vip de ps.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto25': {
+                img: './imagenes/xb1.jpeg',
+                titulo: 'PLANTS AND ZOMBIES',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto26': {
+                img: './imagenes/xb2.jpeg',
+                titulo: 'SONIC RINGS',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto27': {
+                img: './imagenes/xb3.jpeg',
+                titulo: 'XHOLAT',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto28': {
+                img: './imagenes/xb4.jpeg',
+                titulo: 'CALL OF DUTTY',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto29': {
+                img: './imagenes/xb5.jpeg',
+                titulo: 'KATCERTS',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto30': {
+                img: './imagenes/xb6.png',
+                titulo: 'HALLO',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto31': {
+                img: './imagenes/xb7.png',
+                titulo: 'EL CHAVO RANK',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto32': {
+                img: './imagenes/xb8.jpeg',
+                titulo: 'OUTLAS',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto33': {
+                img: './imagenes/xb9.jpeg',
+                titulo: 'W2K 22',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+            'producto34': {
+                img: './imagenes/xb10.png',
+                titulo: 'HALLO INFINITE',
+                descripcion: 'prooducto vip de xbox.',
+                precio: '$100.99 USD',
+                estrellas: '★★★★★'
+            },
+
+            // Agrega más productos aquí según sea necesario
+        };
+
+        // Mostrar la información del producto seleccionado
+        var productoSeleccionado = infoProductos[producto];
+        document.getElementById('detalle-img').src = productoSeleccionado.img;
+        document.getElementById('detalle-titulo').innerText = productoSeleccionado.titulo;
+        document.getElementById('detalle-descripcion').innerText = productoSeleccionado.descripcion;
+        document.getElementById('detalle-precio').innerText = productoSeleccionado.precio;
+        document.getElementById('detalle-estrellas').innerHTML = productoSeleccionado.estrellas;
+
+        // Mostrar el cuadro de detalle
+        document.getElementById('detalle-producto').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
+

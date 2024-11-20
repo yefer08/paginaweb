@@ -1,0 +1,641 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Contenedor principal */
+#contenedor {
+    background: black;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.hidden {
+    display: none;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #logo img {
+        width: 80px; /* Hacemos el logo más pequeño en pantallas móviles */
+        height: 80px;
+    }
+
+    #logo h4 {
+        font-size: 20px; /* Reducimos el tamaño del nombre */
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        font-size: 14px; /* Reducimos el tamaño de los enlaces en móviles */
+        margin: 0 10px; /* Menos espacio entre enlaces */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Aseguramos que todo se apile verticalmente */
+        text-align: center;
+    }
+
+    nav a {
+        display: block; /* Hacemos los enlaces de navegación bloques */
+        margin: 10px 0; /* Añadimos más espacio entre los enlaces */
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;  /* Organiza los elementos en columna */
+    align-items: center;     /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center;      /* Alinea el texto al centro */
+    background-color: #1F1F1F; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;     /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+#logo img {
+    width: 150px;  /* Ajusta el tamaño del logo */
+    height: 150px; /* Mantén la proporción del logo */
+    border-radius: 40%;  /* Opcional: hace el logo redondo */
+}
+
+#logo h4 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y distintiva */
+    font-weight: bold; /* Aumentar peso para mayor énfasis */
+    font-size: 28px;
+    color: #e5dbb1;
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+nav a{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px; /* Añadir espaciado entre letras para legibilidad */
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 12px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: lightyellow;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 15px;
+    position: relative;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+    color: greenyellow;
+    font-size: 18px;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: greenyellow;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Estilos para el main */
+main {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilo para la sección principal */
+section {
+    background: black;
+    width: 2000%;
+    height: 350%;
+    padding: 250px;
+    text-align: center; /* Centra el contenido del catálogo */
+    margin: auto; /* Centra el contenedor del catálogo */
+}
+
+/* Estilo para el título */
+#titulo h1 {
+    color: #e5dbb1;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Estilos para la publicidad */
+#publicidad img {
+    width: 100%;
+}
+
+/* Estilo para aside */
+aside {
+    background: black;
+    width: 40%;
+}
+
+/* Estilo para el footer */
+footer {
+    background: #e5dbb1; /* Color de fondo del footer */
+    padding: 20px;
+    text-align: center;
+    color: black; /* Color de texto dentro del footer */
+}
+
+#pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#redes-sociales {
+    display: flex; /* Cambia el comportamiento del contenedor a flex */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+#redes-sociales img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Estilos para el banner */
+#banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-out;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según sea necesario */
+    background-image: url('imagenes/banner$.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+#banner:hover img {
+    transform: scale(1.05); /* Aumenta ligeramente la imagen al hacer hover */
+}
+
+/* Estilo para el contenido del banner */
+.contenido-banner {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 8px;
+}
+
+/* Animación de Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: slideIn 2s ease-out;
+}
+
+#banner p {
+    font-size: 20px;
+    animation: slideIn 2s ease-out 1s;
+}
+
+/* Efecto de deslizamiento */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto de hover sobre el banner */
+#banner:hover .contenido-banner {
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo cuando el cursor pasa sobre el banner */
+}
+
+/* Estilos para el inicio */
+
+#inicio{
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+}
+#inicio p {
+    color: #e5dbb1;
+    font-family: 'Arial', sans-serif;
+    line-height: 2.0; /* Aumenta la altura de línea para mejor legibilidad */
+}
+
+#inicio h1 {
+    color: #e5dbb1;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    font-size: 36px; /* Aumentamos el tamaño del título */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra al texto */
+}
+#inicio ul{
+    color: #e5dbb1;
+    background-color: #1F1F1F; /* Fondo oscuro similar al contenedor */
+    padding-left: 20px; /* Agrega espacio a la izquierda de la lista */
+    list-style-type: disc; /* Pone puntos delante de los ítems */
+    margin-top: 20px;
+}
+#inicio li {
+    margin-bottom: 15px; /* Aumenta el espacio entre los elementos de la lista */
+    line-height: 1.6; /* Aumenta la altura de línea para mejor legibilidad */
+    font-size: 18px; /* Tamaño de fuente para mayor claridad */
+    color: #e5dbb1; /* Color de texto */
+    transition: transform 0.3s ease; /* Agrega animación suave al hacer hover */
+}
+/* Efecto hover para los elementos de la lista */
+#inicio li:hover {
+    transform: scale(1.05); /* Hace que el elemento se agrande un poco al pasar el ratón */
+    color: greenyellow; /* Cambia el color del texto al pasar el ratón */
+}
+
+
+/* Estilos para la sección de contacto */
+/* Estilo general para el contenedor de contacto */
+#Contactenos {
+    background-color: black;
+    color: #e5dbb1;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+#Contactenos h1 {
+    color: #e5dbb1;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    font-size: 36px; /* Tamaño del título */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Efecto sombra */
+}
+
+#Contactenos p {
+    color: #e5dbb1;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8; /* Aumenta la altura de línea para mejor legibilidad */
+    margin-bottom: 20px;
+}
+#Contactenos .contacto-info ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding-left: 0; /* Elimina el padding por defecto */
+    margin-top: 20px;
+}
+#Contactenos .contacto-info li {
+    margin-bottom: 12px; /* Aumenta el espacio entre los elementos de la lista */
+    font-size: 18px; /* Tamaño de la fuente para mayor claridad */
+    line-height: 1.6; /* Aumenta la altura de la línea para mejor legibilidad */
+    color: #e5dbb1; /* Color del texto */
+    transition: transform 0.3s ease; /* Efecto de hover */
+}
+/* Estilo para los enlaces en la lista */
+#Contactenos .contacto-info a {
+    color: #e5dbb1;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+#Contactenos .contacto-info a:hover {
+    color: greenyellow; /* Cambia el color del enlace al pasar el ratón */
+    text-decoration: underline; /* Agrega subrayado al hacer hover */
+}
+
+
+#galeria {
+    text-decoration: overline;
+    text-align: center;
+    image-orientation: center;
+}
+
+/* Estilo para el formulario de contacto */
+
+
+/* Clase que oculta los formularios */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Desactiva interacciones */
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+#FormularioContacto {
+    background: #1F1F1F;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    color: #e5dbb1;
+}
+
+#FormularioContacto h2 {
+    color: #e5dbb1;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #e5dbb1;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #e5dbb1;
+    border-radius: 8px;
+    background: #333;
+    color: #e5dbb1;
+    margin-bottom: 10px;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: greenyellow;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #e5dbb1;
+    color: black;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+/* Estilo de los enlaces en el formulario */
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Estilo para la sección del catálogo */
+#titulo {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#titulo h1 {
+    font-size: 36px;
+    color: #e5dbb1;
+    text-shadow: 2px 2px 10px #000; /* Agrega un poco de sombra al texto */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para la galería de productos */
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Estilo para los productos dentro de la galería */
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al hacer hover */
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+}
+
+.producto img:hover {
+    transform: scale(1.05); /* Hace que la imagen se agrande un poco */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra al hacer hover */
+}
+
+.producto {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    #titulo h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    #galeria {
+        grid-template-columns: 1fr;
+    }
+
+    #titulo h1 {
+        font-size: 24px;
+    }
+}
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Estilo general para el contenedor */
+#contenedor-formularios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de los formularios */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #e5dbb1;  /* Bordes dorados suaves */
+    border-radius: 5px;
+    background-color: #1F1F1F; /* Fondo oscuro */
+    color: #e5dbb1; /* Texto dorado */
+}
+
+/* Esconder el formulario de registro por defecto */
+.hidden {
+    display: none;
+}
+
+/* Estilo de los campos del formulario */
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #e5dbb1;  /* Bordes dorados suaves */
+    border-radius: 4px;
+    background-color: #333; /* Fondo oscuro */
+    color: #e5dbb1;  /* Texto dorado */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: greenyellow; /* Resalta en dorado verde brillante al enfocar */
+    outline: none;
+}
+
+/* Estilo de los botones */
+button {
+    padding: 10px;
+    border: none;
+    background-color: #e5dbb1; /* Color dorado para el botón */
+    color: black; /* Texto negro */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: greenyellow; /* Cambia a verde brillante al pasar el ratón */
+    color: black; /* Mantiene el texto en negro */
+}
+
+/* Estilo de los enlaces */
+a {
+    color: #04ff00; /* Verde brillante para los enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: greenyellow; /* Cambia a verde brillante al pasar el ratón */
+}
+.mensaje-error {
+    color: #fff;
+    background-color: #f44336; /* Rojo */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #d32f2f; /* Borde más oscuro */
+}
+/* Estilo para mensajes de éxito */
+.mensaje-exito {
+    color: #fff;
+    background-color: #4CAF50; /* Verde */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #388E3C;
+}
+
+/* Estilo para mensajes de advertencia */
+.mensaje-advertencia {
+    color: #fff;
+    background-color: #FF9800; /* Naranja */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #F57C00;
+}
+/* Estilo para mensajes de advertencia */
+.mensaje-advertencia {
+    color: #fff;
+    background-color: #FF9800; /* Naranja */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #F57C00;
+}

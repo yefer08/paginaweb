@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YEYE GAMES</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Función para cargar páginas en el contenedor principal
+            function cargarPagina(pagina) {
+                $("#principal").load("file/" + pagina + ".html");
+            }
+
+            // Cargar página de inicio por defecto
+            cargarPagina("inicio");
+
+            // Manejadores de eventos para los enlaces del menú
+            $("#inicio").click(function(){
+                cargarPagina("inicio");
+            });
+
+            $("#quienessomos").click(function(){
+                cargarPagina("quienes_somos");
+            });
+
+            $("#productos").click(function(){
+                cargarPagina("productos");
+            });
+
+            $("#contactenos").click(function(){
+                cargarPagina("contactenos");
+            });
+
+            $("#acceder").click(function(){
+                cargarPagina("acceder");
+            });
+
+            // Mostrar/ocultar el submenú de productos al pasar el mouse
+            $(".menu-item").hover(function() {
+                $(this).find(".submenu").stop(true, true).slideDown(200); // Mostrar
+            }, function() {
+                $(this).find(".submenu").stop(true, true).slideUp(200); // Ocultar
+            });
+
+            // Funcionalidad de los enlaces del submenú
+            $(".submenu a").click(function(e) {
+                e.preventDefault();  // Evitar que el enlace recargue la página
+                
+                // Obtener el texto del enlace, lo convierte a minúsculas y lo reemplaza por guiones bajos
+                var pagina = $(this).text().toLowerCase().replace(" ", "_");
+
+                // Aquí puedes configurar las páginas que quieres cargar basándote en el nombre del enlace
+                switch (pagina) {
+                    case 'ps4':
+                        cargarPagina("juegosps4");
+                        break;
+                    case 'ps5':
+                        cargarPagina("juegosps5");
+                        break;
+                    case 'xbox':
+                        cargarPagina("juegosxbox");
+                        break;
+                    case 'nintendo':
+                        cargarPagina("juegosnintendo");
+                        break;
+                    case 'streaming':
+                        cargarPagina("streaming");
+                        break;
+                    case 'pin_virtuales':
+                        cargarPagina("pin_virtuales");
+                        break;
+                    default:
+                        cargarPagina("productos"); // Si no se encuentra la página, carga el catálogo de productos
+                        break;
+                }
+            });
+        });
+    </script>
+    <style>
+        /* Estilo para el menú desplegable */
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 16px;
+            color:  #e5dbb1;
+        }
+
+        /* Menú de productos */
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Submenú oculto por defecto */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color:  #e5dbb1;
+            border: 1px solid #e1d6d6;
+            min-width: 200px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 8px 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .submenu a:hover {
+            background-color: #ddd;
+        }
+
+        /* Efectos visuales */
+        .menu-item:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <div id="logo">
+                <img src="imagenes/logop.jpg" alt="Logo de YEYE GAMES">
+                <h4>YEYE GAMES</h4>
+            </div>
+            <nav>
+                <a id="inicio" href="#">Inicio</a>
+                <a id="quienessomos" href="#">Quiénes somos</a>
+                <div class="menu-item">
+                    <a id="productos" href="#">Productos</a>
+                    <!-- Submenú de productos -->
+                    <div class="submenu">
+                        <a href="#">PS4</a>
+                        <a href="#">PS5</a>
+                        <a href="#">Xbox</a>
+                        <a href="#">Nintendo</a>
+                        <a href="#">Streaming</a>
+                        <a href="#">Pin Virtuales</a>
+                    </div>
+                </div>
+                <a id="contactenos" href="#">Contáctenos</a>
+                <a id="acceder" href="#">Acceder</a>
+            </nav>
+        </header>
+        
+        <div id="banner">
+            <div class="contenido-banner">
+                <h1>¡Bienvenido a YEYE GAMES!</h1>
+                <p>Descubre las mejores ofertas en videojuegos y mucho más.</p>
+            </div>
+            <img src="imagenes/banner$.png" alt="Banner de YEYE GAMES">
+        </div>
+
+        <main>
+            <section id="principal">
+                <div id="publicidad">
+                    <div id="titulo"><h1>CATÁLOGO DE PRODUCTOS</h1></div>
+                    <img src="imagenes/imagen web.png" alt="Imagen del catálogo de productos">
+                </div>
+            </section>
+            <aside>
+                <div id="publicidad">
+                    <!-- Publicidad adicional aquí -->
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div id="pie">
+                <div id="redes-sociales">
+                    <a href="https://www.facebook.com/"><img src="imagenes/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="imagenes/instagram.jpg" alt="Instagram"></a>
+                    <a href="https://www.x.com/"><img src="imagenes/x.png" alt="X"></a>
+                    <a href="https://www.tiktok.com/es/"><img src="imagenes/tiktok.png" alt="Tik-tok"></a>
+                </div>
+                <div id="pie-info">
+                    <h1>Ubicación</h1>
+                    <p>CR 15# 50-32 Centro comercial el diamante Medellín - Colombia</p>
+                    <h1>Teléfonos</h1>
+                    <p>+1 777-999-888<br>+1 777-888-999</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script> <!-- Aquí es donde colocas el enlace a tu archivo JavaScript -->
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso y Registro - YEYE GAMES</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <div id="contenedor-formularios">
+        <!-- Formulario de ingreso -->
+        <div id="formulario-ingreso" class="formulario">
+            <h2>Iniciar Sesión</h2>
+            <!-- Acción del formulario hacia el archivo PHP que procesa el ingreso -->
+            <form action="file/ingreso.php" method="POST">
+                <div class="campo-formulario">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div>
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </form>
+            <p>No tienes cuenta? <a href="#" id="ir-a-registro">Regístrate aquí</a></p>
+        </div>
+
+        <!-- Formulario de registro -->
+        <div id="formulario-registro" class="formulario hidden">
+            <h2>Registro</h2>
+            <!-- Acción del formulario hacia el archivo PHP que procesa el registro -->
+            <form action="file/registro.php" method="POST">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="usuario_reg">Usuario:</label>
+                    <input type="text" id="usuario_reg" name="usuario_reg" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="password_reg">Contraseña:</label>
+                    <input type="password" id="password_reg" name="password_reg" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="confirmar_password_reg">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmar_password_reg" name="confirmar_password_reg" required>
+                </div>
+
+                <div>
+                    <button type="submit">Registrarse</button>
+                </div>
+            </form>
+            <p>Ya tienes cuenta? <a href="#" id="ir-a-ingreso">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Manejo de la visibilidad de los formularios
+        document.getElementById('ir-a-registro').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('formulario-ingreso').classList.add('hidden');
+            document.getElementById('formulario-registro').classList.remove('hidden');
+        });
+
+        document.getElementById('ir-a-ingreso').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('formulario-ingreso').classList.remove('hidden');
+            document.getElementById('formulario-registro').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+
+
+

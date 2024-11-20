@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JUEGOS PS4</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Contenedor principal que agrupa los productos */
+        .productos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        /* Estilos de cada producto */
+        #detalle-producto {
+            background-color: #e5dbb1;
+            border: 1px solid #e5dbb1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            /* Transición para suavizar el efecto de aumento */
+            transition: transform 0.3s ease;
+        }
+
+        #detalle-producto img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        #detalle-producto h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #detalle-producto .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #detalle-producto .estrellas {
+            margin-top: 15px;
+        }
+
+        #detalle-producto .estrellas span {
+            color: gold;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        #detalle-producto .comprar-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        #detalle-producto .comprar-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Animación de aumento al pasar el mouse */
+        #detalle-producto:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al 105% */
+        }
+    </style>
+</head>
+<body>
+
+<div id="titulo">
+    <h1>JUEGOS DE PS5 Y PS</h1>
+</div>
+
+<!-- Contenedor que agrupa todos los productos -->
+<div class="productos-container">
+    <!-- Primer producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/ps6.jpeg" alt="JUEGOS PS5 THE SHOW">
+        <h2>JUEGOS PS5 THE SHOW</h2>
+        <p>Disfruta de este juego para PS5 con buena jugabilidad y grandes gráficos.</p>
+        <div class="precio">$99.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Segundo producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/ps7.jpg" alt="JUEGOS PS GTA SAN ANDREAS">
+        <h2>JUEGOS PS GTA SAN ANDREAS</h2>
+        <p>Disfruta este clásico con gráficos mejorados en su edición definitiva.</p>
+        <div class="precio">$50.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Tercer producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/ps8.jpg" alt="JUEGOS PS BATMAN">
+        <h2>JUEGOS PS BATMAN</h2>
+        <p>¡Sumérgete en el gran héroe de la noche, Batman!</p>
+        <div class="precio">$30.99 USD</div>
+        <div class="estrellas">
+            <span>★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Cuarto producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/ps9.jpeg" alt="JUEGOS PS5 MEDIUM">
+        <h2>JUEGOS PS5 MEDIUM</h2>
+        <p>Disfruta de este gran juego para PS5.</p>
+        <div class="precio">$30.99 USD</div>
+        <div class="estrellas">
+            <span>★★★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+
+    <!-- Quinto producto -->
+    <div id="detalle-producto">
+        <img src="./imagenes/ps10.jpeg" alt="JUEGOS PS5 GODFALE">
+        <h2>JUEGOS PS5 GODFALE</h2>
+        <p>Disfruta de este gran juego para PS5.</p>
+        <div class="precio">$30.99 USD</div>
+        <div class="estrellas">
+            <span>★★★</span>
+        </div>
+        <button class="comprar-btn">Comprar ahora</button>
+    </div>
+</div>
+
+</body>
+</html>
+
